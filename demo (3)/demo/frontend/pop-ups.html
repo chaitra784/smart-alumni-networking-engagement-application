@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-ups UI</title>
+    <link rel="stylesheet" href="pop-ups.css">
+    <!-- Using FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Main Chat Page -->
+    <div id="main-page" class="app-container">
+        <header class="header">
+            <i class="fa-solid fa-arrow-left"></i>
+            <h1 class="title">pop-ups...</h1>
+            <div class="header-icons">
+                <i class="fa-solid fa-hands" id="hand-icon" title="Queries"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
+            </div>
+        </header>
+
+        <main class="chat-area">
+            <!-- Main Job Post -->
+            <div class="post-card">
+                <div class="post-header">
+                    <div class="user-info">
+                        <span class="name">Tara</span>
+                        <span class="handle">tara...0_0</span>
+                    </div>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <p class="post-content">Good evening all...I have few job references vacant in my firm. Interested can ping me.</p>
+                <div class="post-footer">
+                    <span>views...</span>
+                    <div class="stat">
+                        <img src="https://via.placeholder.com/20" class="mini-thumb">
+                        <span>104 responses...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Replies -->
+            <div class="reply left">Role??</div>
+            <div class="reply right">
+                <img src="https://via.placeholder.com/20" class="mini-thumb">
+                <span>Any openings in fullstack??</span>
+            </div>
+        </main>
+
+        <footer class="input-bar">
+            <i class="fa-solid fa-table-cells-large"></i>
+            <input type="text" placeholder="type.. here" id="chat-input">
+            <i class="fa-solid fa-link"></i>
+            <i class="fa-solid fa-camera"></i>
+        </footer>
+    </div>
+
+    <!-- Search Overlay -->
+    <div id="search-overlay" class="overlay hidden">
+        <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search conversations..." id="search-box">
+            <i class="fa-solid fa-xmark" id="close-search"></i>
+        </div>
+    </div>
+
+    <!-- Queries Page (Redirect) -->
+    <div id="queries-page" class="app-container hidden">
+        <header class="header">
+            <i class="fa-solid fa-arrow-left" id="back-to-chat"></i>
+            <h1 class="title">Queries</h1>
+        </header>
+
+        <main class="query-form">
+            <div class="form-section">
+                <label>Select Audience (Multiple)</label>
+                <div class="chip-container" id="audience-select">
+                    <div class="chip" data-value="alumni">Alumni</div>
+                    <div class="chip" data-value="students">Students</div>
+                    <div class="chip" data-value="professors">Professors</div>
+                    <div class="chip" data-value="admins">Admins</div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <label>Type of Query</label>
+                <select id="query-type">
+                    <option>Official</option>
+                    <option>Unofficial</option>
+                    <option>Medical Emergency</option>
+                    <option>Job Notifications</option>
+                    <option>Quick Pops</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <label>Description</label>
+                <div class="textarea-wrapper">
+                    <textarea id="query-desc" placeholder="Describe your query here..."></textarea>
+                    <div id="role-indicator" class="role-icon">
+                        <!-- Icon changes based on selection -->
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="submit-btn">Post Query</button>
+        </main>
+    </div>
+
+    <script src="pop-ups.js"></script>
+</body>
+</html>

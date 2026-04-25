@@ -1,0 +1,192 @@
+:root {
+    --bg-color: #4a4a4a;
+    --header-bg: #000000;
+    --bubble-bg: #4a2c2c;
+    --text-main: #ffffff;
+    --text-dim: #bbbbbb;
+    --accent: #7b4343;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #222;
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 450px;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.hidden { display: none !important; }
+
+/* Header Styles */
+.header {
+    background-color: var(--header-bg);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header i { font-size: 20px; cursor: pointer; color: #4a90e2; }
+.header .title { flex-grow: 1; font-size: 28px; color: #eec16d; margin: 0; font-family: serif; }
+.header-icons { display: flex; gap: 20px; align-items: center; }
+
+/* Chat Area */
+.chat-area {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.post-card {
+    background-color: var(--bubble-bg);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.post-header { display: flex; justify-content: space-between; margin-bottom: 10px; }
+.user-info .name { font-weight: bold; margin-right: 5px; }
+.user-info .handle { font-size: 12px; color: var(--text-dim); }
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-top: 15px;
+}
+
+.stat { display: flex; align-items: center; gap: 5px; }
+.mini-thumb { width: 24px; height: 24px; border-radius: 4px; object-fit: cover; }
+
+.reply {
+    padding: 12px 20px;
+    border-radius: 15px;
+    max-width: 80%;
+    font-size: 14px;
+}
+
+.reply.left { background-color: var(--bubble-bg); align-self: flex-start; }
+.reply.right { 
+    background-color: var(--accent); 
+    align-self: flex-end; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+}
+
+/* Input Bar */
+.input-bar {
+    padding: 15px;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.input-bar input {
+    flex-grow: 1;
+    background: transparent;
+    border: 1px solid #777;
+    border-radius: 20px;
+    padding: 10px 15px;
+    color: white;
+}
+
+.input-bar i { color: #ccc; font-size: 20px; cursor: pointer; }
+
+/* Overlays & Queries Page */
+.overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 100px;
+    background: rgba(0,0,0,0.9);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.search-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background: #333;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.search-container input {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    color: white;
+    margin: 0 10px;
+    outline: none;
+}
+
+/* Form Styles */
+.query-form { padding: 20px; display: flex; flex-direction: column; gap: 20px; }
+.form-section label { display: block; margin-bottom: 10px; color: #eec16d; font-weight: bold; }
+
+.chip-container { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip {
+    padding: 8px 15px;
+    background: #333;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.chip.active { background: #4a90e2; border-color: white; }
+
+select, textarea {
+    width: 100%;
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.textarea-wrapper { position: relative; }
+.role-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--accent);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.submit-btn {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}

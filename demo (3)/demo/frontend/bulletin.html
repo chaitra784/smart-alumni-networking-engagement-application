@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulletin</title>
+    <link rel="stylesheet" href="bulletin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <i class="fa-solid fa-arrow-left"></i>
+            <h1>bulletin...</h1>
+        </header>
+
+        <section class="tales-section">
+            <div class="section-header">
+                <h2><i class="fa-regular fa-eye"></i> My tales...</h2>
+                <button id="add-tale-btn" class="plus-btn">+</button>
+            </div>
+            <div class="tales-list">
+                <div class="tale-item active">
+                    <img src="https://picsum.photos/id/64/200" alt="Tara">
+                    <span>Tara..</span>
+                </div>
+                <div class="tale-item">
+                    <img src="https://picsum.photos/id/102/200" alt="Tara">
+                    <span>Tara..</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="typing-section">
+            <div class="typing-header">
+                <h2>Typing... <i class="fa-solid fa-comment-dots"></i></h2>
+                <i class="fa-regular fa-pen-to-square edit-icon" id="goto-create"></i>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="groups">Groups</button>
+                <button class="filter-btn" data-filter="squad">My Squad</button>
+            </div>
+
+            <div class="message-list" id="chat-list">
+                <!-- Chat items will be injected here by JS -->
+            </div>
+        </section>
+    </div>
+    <script src="bulletin.js"></script>
+</body>
+</html>

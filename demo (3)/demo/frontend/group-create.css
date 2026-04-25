@@ -1,0 +1,23 @@
+body { margin: 0; background: #000; color: white; font-family: sans-serif; }
+.create-container { max-width: 450px; margin: auto; }
+
+header { padding: 20px; display: flex; align-items: center; gap: 20px; }
+.gold-title { color: #eec16d; flex: 1; font-size: 24px; margin: 0; }
+header i { font-size: 20px; cursor: pointer; }
+
+.action-list { background: #222; }
+.action-item {
+    padding: 20px; border-bottom: 1px solid #111;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 18px; cursor: pointer;
+}
+.action-item:hover { background: #333; }
+.action-item i { font-size: 24px; color: #ddd; }
+
+.contacts-list { padding: 20px; }
+.contact-row { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.contact-row img:first-child { width: 45px; height: 45px; border-radius: 10px; }
+.contact-row .info { flex: 1; }
+.contact-row h4 { margin: 0; font-size: 16px; }
+.contact-row span { color: #888; font-size: 13px; }
+.small-tag { width: 18px; height: 18px; border-radius: 4px; }
